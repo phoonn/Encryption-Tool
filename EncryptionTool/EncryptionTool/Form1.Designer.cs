@@ -1,6 +1,6 @@
 ﻿namespace EncryptionTool
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,76 +29,151 @@
         private void InitializeComponent()
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_browse = new System.Windows.Forms.Button();
+            this.btn_encrypt = new System.Windows.Forms.Button();
+            this.tb_encryptionKey = new System.Windows.Forms.TextBox();
+            this.btn_decrypt = new System.Windows.Forms.Button();
+            this.tb_file = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tbKey = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tb_decryptionKey = new System.Windows.Forms.TextBox();
+            this.encryptionWorker = new System.ComponentModel.BackgroundWorker();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.timeWatchLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
+            // btn_browse
             // 
-            this.button1.Location = new System.Drawing.Point(60, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Browse File";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_browse.Location = new System.Drawing.Point(234, 33);
+            this.btn_browse.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_browse.Name = "btn_browse";
+            this.btn_browse.Size = new System.Drawing.Size(130, 29);
+            this.btn_browse.TabIndex = 0;
+            this.btn_browse.Text = "Browse File";
+            this.btn_browse.UseVisualStyleBackColor = true;
+            this.btn_browse.Click += new System.EventHandler(this.btn_browse_Click);
+            // 
+            // btn_encrypt
+            // 
+            this.btn_encrypt.Location = new System.Drawing.Point(178, 83);
+            this.btn_encrypt.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_encrypt.Name = "btn_encrypt";
+            this.btn_encrypt.Size = new System.Drawing.Size(130, 32);
+            this.btn_encrypt.TabIndex = 2;
+            this.btn_encrypt.Text = "Encrypt";
+            this.btn_encrypt.UseVisualStyleBackColor = true;
+            this.btn_encrypt.Click += new System.EventHandler(this.btn_encrypt_Click);
+            // 
+            // tb_encryptionKey
+            // 
+            this.tb_encryptionKey.Location = new System.Drawing.Point(29, 90);
+            this.tb_encryptionKey.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_encryptionKey.Name = "tb_encryptionKey";
+            this.tb_encryptionKey.Size = new System.Drawing.Size(135, 20);
+            this.tb_encryptionKey.TabIndex = 3;
+            // 
+            // btn_decrypt
+            // 
+            this.btn_decrypt.Location = new System.Drawing.Point(178, 133);
+            this.btn_decrypt.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_decrypt.Name = "btn_decrypt";
+            this.btn_decrypt.Size = new System.Drawing.Size(130, 35);
+            this.btn_decrypt.TabIndex = 4;
+            this.btn_decrypt.Text = "Decrypt";
+            this.btn_decrypt.UseVisualStyleBackColor = true;
+            this.btn_decrypt.Click += new System.EventHandler(this.btn_decrypt_Click);
+            // 
+            // tb_file
+            // 
+            this.tb_file.Location = new System.Drawing.Point(29, 38);
+            this.tb_file.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_file.Name = "tb_file";
+            this.tb_file.Size = new System.Drawing.Size(201, 20);
+            this.tb_file.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 94);
+            this.label1.Location = new System.Drawing.Point(29, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Choose file";
             // 
-            // button2
+            // label2
             // 
-            this.button2.Location = new System.Drawing.Point(60, 212);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 39);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Encrypt";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Encryption Key";
             // 
-            // tbKey
+            // label3
             // 
-            this.tbKey.Location = new System.Drawing.Point(252, 220);
-            this.tbKey.Name = "tbKey";
-            this.tbKey.Size = new System.Drawing.Size(102, 22);
-            this.tbKey.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 123);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Decription Key";
             // 
-            // button3
+            // tb_decryptionKey
             // 
-            this.button3.Location = new System.Drawing.Point(60, 274);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 43);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Decrypt";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.tb_decryptionKey.Location = new System.Drawing.Point(29, 141);
+            this.tb_decryptionKey.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_decryptionKey.Name = "tb_decryptionKey";
+            this.tb_decryptionKey.Size = new System.Drawing.Size(135, 20);
+            this.tb_decryptionKey.TabIndex = 8;
             // 
-            // Form1
+            // encryptionWorker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.encryptionWorker.WorkerReportsProgress = true;
+            this.encryptionWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.encryptionWorker_DoWork);
+            this.encryptionWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.encryptionWorker_ProgressChanged);
+            this.encryptionWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.encryptionWorker_RunWorkerCompleted);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(29, 185);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(335, 23);
+            this.progressBar.TabIndex = 10;
+            // 
+            // timeWatchLbl
+            // 
+            this.timeWatchLbl.AutoSize = true;
+            this.timeWatchLbl.Location = new System.Drawing.Point(234, 220);
+            this.timeWatchLbl.Name = "timeWatchLbl";
+            this.timeWatchLbl.Size = new System.Drawing.Size(74, 13);
+            this.timeWatchLbl.TabIndex = 11;
+            this.timeWatchLbl.Text = "Time Elapsed:";
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1139, 524);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.tbKey);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(407, 252);
+            this.Controls.Add(this.timeWatchLbl);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.tb_decryptionKey);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.tb_file);
+            this.Controls.Add(this.btn_decrypt);
+            this.Controls.Add(this.tb_encryptionKey);
+            this.Controls.Add(this.btn_encrypt);
+            this.Controls.Add(this.btn_browse);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "MainForm";
+            this.Text = "Encryption Tool";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,11 +182,18 @@
         #endregion
 
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_browse;
+        private System.Windows.Forms.Button btn_encrypt;
+        private System.Windows.Forms.TextBox tb_encryptionKey;
+        private System.Windows.Forms.Button btn_decrypt;
+        private System.Windows.Forms.TextBox tb_file;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox tbKey;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tb_decryptionKey;
+        private System.ComponentModel.BackgroundWorker encryptionWorker;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label timeWatchLbl;
     }
 }
 
