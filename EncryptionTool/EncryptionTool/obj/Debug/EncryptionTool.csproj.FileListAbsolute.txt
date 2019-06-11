@@ -1,0 +1,10 @@
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\bin\Debug\EncryptionTool.exe.config
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\bin\Debug\EncryptionTool.exe
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\bin\Debug\EncryptionTool.pdb
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.csprojAssemblyReference.cache
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.Properties.Resources.resources
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.csproj.GenerateResource.cache
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.csproj.CoreCompileInputs.cache
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.exe
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.pdb
+D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.MainForm.resources

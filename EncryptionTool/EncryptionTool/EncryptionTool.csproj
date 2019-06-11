@@ -82,10 +82,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Sound.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wow_work_complete.mp3" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

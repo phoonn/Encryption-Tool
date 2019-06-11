@@ -59,15 +59,5 @@ namespace EncryptionTool.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] wow_work_complete {
-            get {
-                object obj = ResourceManager.GetObject("wow_work_complete", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }
