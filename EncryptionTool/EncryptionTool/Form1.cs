@@ -19,6 +19,7 @@ namespace EncryptionTool
         string key;
         const int mbSize = 1048576;
         string filePath;
+        bool dontDelete = false;
         Stopwatch stop = new Stopwatch();
 
         public MainForm()
@@ -64,6 +65,7 @@ namespace EncryptionTool
             tb_encryptionKey.ReadOnly = true;
             tb_decryptionKey.ReadOnly = true;
             tb_file.ReadOnly = true;
+            dontDelete = cb_noDelete.Checked;
             // Encryption process
             encryptionWorker.RunWorkerAsync(argument: "encrypt");
 
@@ -98,6 +100,7 @@ namespace EncryptionTool
             tb_encryptionKey.ReadOnly = true;
             tb_decryptionKey.ReadOnly = true;
             tb_file.ReadOnly = true;
+            dontDelete = cb_noDelete.Checked;
 
             timeWatchLbl.Text = "Elapsed Time:";
             encryptionWorker.RunWorkerAsync(argument: "decrypt");
@@ -160,7 +163,8 @@ namespace EncryptionTool
                 outputFileStream.Close();
                 inputFileStream.Close();
 
-                File.Replace(tempFile, filePath, null);
+                if (!dontDelete)
+                    File.Replace(tempFile, filePath, null);
             }
             catch (Exception ex)
             {
@@ -169,10 +173,10 @@ namespace EncryptionTool
                 return;
             }
 
-
             stop.Stop();
             playSimpleSound();
             MessageBox.Show("File Encryption Complete!");
+            GC.Collect();
         }
 
         private byte[] GenerateSalt()
@@ -240,7 +244,8 @@ namespace EncryptionTool
                     }
                 }
 
-                File.Replace(tempFile, filePath, null);
+                if (!dontDelete)
+                    File.Replace(tempFile, filePath, null);
             }
             catch (System.Security.Cryptography.CryptographicException ex)
             {
@@ -258,6 +263,7 @@ namespace EncryptionTool
             }
             stop.Stop();
             MessageBox.Show("File Decryption Complete!");
+            GC.Collect();
         }
 
 
@@ -291,8 +297,15 @@ namespace EncryptionTool
         }
         private void playSimpleSound()
         {
-            SoundPlayer simpleSound = new SoundPlayer(Directory.GetCurrentDirectory()+"\\wow_work_complete.wav");
-            simpleSound.Play();
+            try
+            {
+                SoundPlayer simpleSound = new SoundPlayer(Directory.GetCurrentDirectory() + "\\wow_work_complete.wav");
+                //simpleSound.Play();
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
     }
 }

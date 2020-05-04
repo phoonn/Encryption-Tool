@@ -8,3 +8,12 @@ D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\De
 D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.exe
 D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.pdb
 D:\uni\4kurs\3 trim\hackers\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.MainForm.resources
+D:\Programing\GitHub\Encryption-Tool\EncryptionTool\EncryptionTool\bin\Debug\EncryptionTool.exe.config
+D:\Programing\GitHub\Encryption-Tool\EncryptionTool\EncryptionTool\bin\Debug\EncryptionTool.exe
+D:\Programing\GitHub\Encryption-Tool\EncryptionTool\EncryptionTool\bin\Debug\EncryptionTool.pdb
+D:\Programing\GitHub\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.csprojAssemblyReference.cache
+D:\Programing\GitHub\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.MainForm.resources
+D:\Programing\GitHub\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.Properties.Resources.resources
+D:\Programing\GitHub\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.csproj.GenerateResource.cache
+D:\Programing\GitHub\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.exe
+D:\Programing\GitHub\Encryption-Tool\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.pdb
